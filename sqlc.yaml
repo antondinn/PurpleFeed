@@ -1,0 +1,19 @@
+version: "2"
+sql:
+  - schema: "sql/schema"
+    queries: "sql/queries"
+    engine: "sqlite"
+    gen:
+      go:
+        out: "internal/database"
+        overrides:
+          - column: "categories.id"
+            go_type: "github.com/google/uuid.UUID"
+          - column: "feeds.id"
+            go_type: "github.com/google/uuid.UUID"
+          - column: "feeds.category_id"
+            go_type: "github.com/google/uuid.UUID"
+          - column: "posts.id"
+            go_type: "github.com/google/uuid.UUID"
+          - column: "posts.feed_id"
+            go_type: "github.com/google/uuid.UUID"

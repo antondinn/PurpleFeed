@@ -1,0 +1,22 @@
+# Local SQLite databases and journals
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+
+# Compiled programs
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Local settings and temporary files
+.env
+.env.*
+!.env.example
+.purpfeed.config
+notes.txt
+.vscode/
+.idea/
